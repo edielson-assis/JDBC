@@ -37,7 +37,7 @@ public class DB {
     }
     
     private static Properties loadProperties() {
-        try (FileInputStream fs = new FileInputStream("C:\\Vs_code\\Java_oo\\jdbc\\jdbc1\\src\\db.properties")) {
+        try (FileInputStream fs = new FileInputStream("C:\\Vs_code\\Java_oo\\jdbc\\jdbc2\\src\\db.properties")) {
             Properties pros = new Properties();
             pros.load(fs);
             return pros;

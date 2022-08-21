@@ -5,12 +5,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import db.Db;
+import db.DB;
 
 public class Program {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        Connection conn = Db.getConnection();
+        Connection conn = DB.getConnection();
 
         try (Statement st = conn.createStatement()) {
             ResultSet rs = st.executeQuery("select * from department");
@@ -22,7 +22,7 @@ public class Program {
             e.printStackTrace();
         }
         finally {
-            Db.closeConnection();
+            DB.closeConnection();
         }
     }
 }
